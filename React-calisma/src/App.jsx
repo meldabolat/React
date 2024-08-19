@@ -1,34 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  //JS kodları yazılır
+let a = 15;
+const firstName ="melda"
+let vize1 = 80
+let vize2 = 60
+let sonuc = true
+let isimler = ["melda","irem","yiğit","sefa"]
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    //HTML kodları yazılır
+    //jsx : {}
+  <div>
+<p> a değişkeninin değeri : {a} </p>
+<p>müşterinin adı {firstName}</p>
+<p>ortalama = {(vize1+vize2)/2}</p>
+  {/*  ternary operator */ }
+{sonuc ? <p>ehliyeti alabilirsin</p> : <p>ehliyeti alamazsın</p>} 
+
+{(vize1+vize2)/2 >=50 ? <p>geçtin</p> : <p>kaldın</p> }
+{
+  isimler.map((isim, index)=>(
+    <div style={{backgroundColor:'orange', border: '1px solid black'}} key={index}> {isim} </div>
+))
+}
+  </div>
   )
 }
 
