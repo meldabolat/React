@@ -3,9 +3,11 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import Comp from './Comp.jsx'
 import './index.css'
+import Product from './Product.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Comp />
+    <Product productName ="Elbise" price ={3200}/>
+    <Product productName = "Pantolon" price={500}/>
   </StrictMode>,
 )
