@@ -1,13 +1,14 @@
 
-import { useEffect, useState } from 'react';
 import './App.css'
-import Hooks from './Hooks';
+// import Hooks from './Hooks';
+import Debug from './Debug';
 
 function App() {
 
   return (
     <div>
-      <Hooks />
+      {/* <Hooks /> */}
+      <Debug />
     </div>
  
   );
