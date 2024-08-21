@@ -1,7 +1,7 @@
 
 import './Course.css'
 function Course  ({course})  {
-    const {id, title, description, price , img} = course;
+    const { title, description, price , img} = course;
   return (
     <div>
       
