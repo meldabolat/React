@@ -2,7 +2,7 @@ import './Navbar.css'
 function Nav ()  {
   return (
     <div className='header'>
-      <div>
+      <div className='title'>
         Udemy Kurslarım
       </div>
     </div>
