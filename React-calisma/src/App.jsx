@@ -1,14 +1,11 @@
 
-import './App.css'
-// import Hooks from './Hooks';
-import Debug from './Debug';
+import Nav from './Kurslarım/Nav';
 
 function App() {
 
   return (
     <div>
-      {/* <Hooks /> */}
-      <Debug />
+      <Nav />
     </div>
  
   );
