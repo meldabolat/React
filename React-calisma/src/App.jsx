@@ -2,10 +2,11 @@
 // import Nav from './Kurslarım/Nav';
 // import { courses } from './Kurslarım/Data';
 // import Course from './Kurslarım/Course';
-import { useEffect } from 'react';
-import './Kurslarım/Course.css'
-import axios from 'axios'
-
+// import { useEffect } from 'react';
+// import './Kurslarım/Course.css'
+// import axios from 'axios'
+import './App.css'
+import Currency from './DovizKuru/Currency';
 // const BASE_URL="http://localhost:3005/"
 
 function App() {
@@ -45,7 +46,8 @@ function App() {
 // })
 
 return (
-    <div>
+    <div style={{display: 'flex',flexDirection:'column', justifyContent : 'center', alignItems: 'center' }}>
+      <Currency />
       {/* <Nav />
       <div className='course-main'>
       {
@@ -54,6 +56,7 @@ return (
         ))
       }
       </div> */}
+      
 
     </div>
  
