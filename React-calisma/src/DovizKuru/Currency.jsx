@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../App.css'
 import './Currency.css'
 import { GoArrowRight } from "react-icons/go";
@@ -8,11 +8,15 @@ let BASE_URL = "https://api.freecurrencyapi.com/v1/latest";
 let API = "fca_live_UbSnF2FSUyThjLjQOHuWI4W7t3tPM2pgRZIM3p8L";
 
 function Currency() {
-    const [amount, setAmount] = useState('');
+    const [amount, setAmount] = useState('1');
     const [fromCurrency, setFromCurrency] = useState('USD');
     const [toCurrency, setToCurrency] = useState('TRY');
     const [result, setResult] = useState('');
-
+useEffect(()=>{
+    if(amount===''){
+        setResult('');
+        return;
+    } 
     const exchange = async () => {
         try {
             const response = await axios.get(`${BASE_URL}?apikey=${API}&base_currency=${fromCurrency}`);
@@ -20,7 +24,12 @@ function Currency() {
         } catch (error) {
             console.error("Error fetching exchange rate:", error);
         }
-    };
+    };exchange();
+},
+[amount,fromCurrency,toCurrency])
+   
+    
+
 
     return (
         <div className='currency-div'>
@@ -60,11 +69,11 @@ function Currency() {
                     placeholder="Sonuç"
                 />
             </div>
-            <div>
+            {/* <div>
                 <button
                     onClick={exchange}
                     className='exchange-button'>Çevir</button>
-            </div>
+            </div> */}
         </div>
     );
 }
